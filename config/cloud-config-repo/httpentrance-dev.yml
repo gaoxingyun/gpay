@@ -1,0 +1,11 @@
+server:
+  port: 16523
+
+spring:
+  application:
+    name: entrance-http
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7850/eureka/

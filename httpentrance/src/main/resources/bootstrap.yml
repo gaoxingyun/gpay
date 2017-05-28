@@ -1,0 +1,6 @@
+spring:
+ cloud:
+    config:
+      name: httpentrance
+      profile: dev
+      uri: 'http://localhost:12345'

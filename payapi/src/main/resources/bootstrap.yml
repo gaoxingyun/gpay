@@ -1,0 +1,6 @@
+spring:
+ cloud:
+    config:
+      name: payapi
+      profile: dev
+      uri: 'http://localhost:12345'
