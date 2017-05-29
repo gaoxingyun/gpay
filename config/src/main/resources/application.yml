@@ -1,15 +1,22 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7850/eureka/
+
 server:
  port: 12345
 
 spring:
+  application:
+    name: config
   cloud:
     config:
+      label: dev
       server:
         git:
           uri: https://github.com/gaoxingyun/gpay.git
-          searchPaths: config/cloud-config-repo
+          searchPaths: config/config
           username:
           password:
           repos:
             local:
-
