@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by xy on 2017/5/27.
  */
 
-@FeignClient(name = "payapi")
+@FeignClient(name = "payapi",fallback = PayApiClientFallback.class)
 @Component
 public interface PayApiClient {
     @RequestMapping(method = RequestMethod.GET, value = "/api/hello")
