@@ -1,7 +1,7 @@
 spring:
  cloud:
     config:
-      name: payapi
+      name: gateway
       profile: dev
       label: dev
       uri: 'http://localhost:12345'

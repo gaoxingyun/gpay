@@ -1,6 +1,7 @@
 spring:
  cloud:
     config:
-      name: cloud-config
+      name: center
       profile: dev
+      label: dev
       uri: 'http://localhost:12345'

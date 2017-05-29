@@ -3,4 +3,5 @@ spring:
     config:
       name: httpentrance
       profile: dev
+      label: dev
       uri: 'http://localhost:12345'

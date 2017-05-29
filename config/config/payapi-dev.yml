@@ -1,11 +1,11 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7850/eureka/
+
 server:
   port: 12463
 
 spring:
   application:
     name: payapi
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:7850/eureka/

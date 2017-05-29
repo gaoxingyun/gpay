@@ -1,2 +1,6 @@
 rootProject.name = 'gpay'
 
+include 'config'
+include 'center'
+include 'httpentrance'
+include 'payapi'

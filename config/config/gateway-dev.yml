@@ -4,8 +4,14 @@ eureka:
       defaultZone: http://localhost:7850/eureka/
 
 server:
-  port: 12463
+  port: 8888
 
 spring:
   application:
-    name: payapi
+    name: gateway
+
+zuul:
+  routes:
+    api-pay:
+      path: /api/pay/**
+      serviceId: payapi
