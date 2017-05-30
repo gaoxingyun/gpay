@@ -11,7 +11,7 @@ spring:
     name: entrance-http
 
   zipkin:
-    base-url: http://localhost:6666
+    base-url: http://localhost:7851
 
 feign:
   hystrix:

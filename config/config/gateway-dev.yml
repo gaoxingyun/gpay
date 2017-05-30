@@ -11,7 +11,7 @@ spring:
     name: gateway
 
   zipkin:
-    base-url: http://localhost:6666
+    base-url: http://localhost:7851
 
 zuul:
   routes:

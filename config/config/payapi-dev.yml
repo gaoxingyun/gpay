@@ -11,4 +11,4 @@ spring:
     name: payapi
 
   zipkin:
-    base-url: http://localhost:6666
+    base-url: http://localhost:7851
