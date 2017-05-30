@@ -1,7 +1,3 @@
 spring:
- cloud:
-    config:
-      name: center
-      profile: dev
-      label: dev
-      uri: 'http://localhost:12345'
+  profiles:
+    active: dev

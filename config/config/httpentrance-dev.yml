@@ -10,6 +10,12 @@ spring:
   application:
     name: entrance-http
 
+  zipkin:
+    locator:
+      discovery:
+        enabled: true
+    service:
+      name: sleuth
 
 feign:
   hystrix:

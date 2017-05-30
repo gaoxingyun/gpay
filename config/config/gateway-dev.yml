@@ -10,6 +10,13 @@ spring:
   application:
     name: gateway
 
+  zipkin:
+    locator:
+      discovery:
+        enabled: true
+    service:
+      name: sleuth
+
 zuul:
   routes:
     api-pay:

@@ -9,3 +9,10 @@ server:
 spring:
   application:
     name: payapi
+
+  zipkin:
+    locator:
+      discovery:
+        enabled: true
+    service:
+      name: sleuth

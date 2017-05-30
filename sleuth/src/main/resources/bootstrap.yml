@@ -6,7 +6,7 @@ eureka:
 spring:
  cloud:
     config:
-      name: payapi
+      name: sleuth
       profile: dev
       label: dev
       discovery:
