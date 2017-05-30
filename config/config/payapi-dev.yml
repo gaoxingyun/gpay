@@ -11,8 +11,4 @@ spring:
     name: payapi
 
   zipkin:
-    locator:
-      discovery:
-        enabled: true
-    service:
-      name: sleuth
+    base-url: http://localhost:6666

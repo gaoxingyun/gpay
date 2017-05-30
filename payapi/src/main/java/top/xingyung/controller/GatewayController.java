@@ -1,5 +1,7 @@
 package top.xingyung.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 /**
@@ -8,11 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class gatewayController {
+public class GatewayController {
 
+    private final static Logger log = LoggerFactory.getLogger(GatewayController.class);
     @RequestMapping("/hello")
     public String hello()
     {
+        log.info("hello 被调用");
+
         return "hello world";
     }
 }

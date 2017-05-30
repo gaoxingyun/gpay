@@ -11,11 +11,7 @@ spring:
     name: entrance-http
 
   zipkin:
-    locator:
-      discovery:
-        enabled: true
-    service:
-      name: sleuth
+    base-url: http://localhost:6666
 
 feign:
   hystrix:
