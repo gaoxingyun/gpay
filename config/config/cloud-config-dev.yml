@@ -1,6 +1,0 @@
-app:
-  msg: "hello world"
-
-eureka:
-  server:
-    port: 7850
