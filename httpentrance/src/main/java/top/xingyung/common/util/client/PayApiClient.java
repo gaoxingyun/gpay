@@ -15,4 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface PayApiClient {
     @RequestMapping(method = RequestMethod.GET, value = "/api/hello")
     public String hello();
+
+    @RequestMapping(method = RequestMethod.POST, value = "/")
+    public String pay(String request);
 }

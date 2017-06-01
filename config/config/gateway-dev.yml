@@ -18,3 +18,7 @@ zuul:
     api-pay:
       path: /api/pay/**
       serviceId: payapi
+
+    api-httpentrance:
+      path: /api/pay-gateway/**
+      serviceId: httpentrance
