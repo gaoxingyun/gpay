@@ -18,7 +18,9 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+    mavenLocal()
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    mavenCentral()
 }
 
 
@@ -40,7 +42,6 @@ dependencies {
 
 	// utils
 	compile('org.apache.commons:commons-lang3:+')
-	compile('com.google.guava:guava:+')
 
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
