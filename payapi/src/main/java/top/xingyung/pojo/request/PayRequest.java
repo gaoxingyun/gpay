@@ -1,5 +1,7 @@
 package top.xingyung.pojo.request;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import jdk.nashorn.internal.objects.annotations.Setter;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -11,6 +13,7 @@ import java.util.Map;
  * Created by xy on 2017/5/31.
  */
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class PayRequest {
 
     // 开发者ID
@@ -21,7 +24,7 @@ public class PayRequest {
     @NotEmpty
     private String method;
 
-    // 版本
+    // 版本 eg:1.0
     @NotEmpty
     private String version;
 

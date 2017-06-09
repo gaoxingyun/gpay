@@ -3,6 +3,7 @@ package top.xingyung.controller;
 import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,10 +22,10 @@ public class GatewayController {
     @ApiImplicitParams(@ApiImplicitParam())
     @ApiResponses(@ApiResponse(code = 200, message = "请求成功"))
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String hello()
+    public String hello(@RequestBody String request)
     {
         log.info("hello 被调用");
 
-        return "hello world";
+        return "hello" + request;
     }
 }

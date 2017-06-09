@@ -1,5 +1,9 @@
 package top.xingyung.pojo.response;
 
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.Map;
@@ -7,6 +11,9 @@ import java.util.Map;
 /**
  * Created by xy on 2017/5/31.
  */
+
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class PayResponse {
 
     // 返回码

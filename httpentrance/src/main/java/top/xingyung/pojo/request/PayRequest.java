@@ -1,5 +1,7 @@
 package top.xingyung.pojo.request;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -9,6 +11,7 @@ import java.util.Map;
  * Created by xy on 2017/5/31.
  */
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class PayRequest {
 
     // 开发者ID

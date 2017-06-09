@@ -26,22 +26,18 @@ import top.xingyung.pojo.response.PayResponse;
 
 @Api("统一支付服务内部接口")
 @RestController
+@RequestMapping("/api")
 public class PayapiController {
 
     private final static Logger log = LoggerFactory.getLogger(PayapiController.class);
 
     @ApiOperation("统一支付服务内部接口")
-    @ApiImplicitParams(@ApiImplicitParam(name = "request", value = "请求数据", dataTypeClass = String.class,  example = "{\"app_id\":\"88888888\", \"method\":\"native.alipay.query\", \"version\":\"1.0\", \"biz_content\":\"{\"mer_id\":\"12345\"}\"}"))
-    @ApiResponses(@ApiResponse(code = 200, message = "请求成功"))
-    @RequestMapping(value = "/", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public String pay(@RequestBody String request) throws PayapiException {
+    @ApiImplicitParams(@ApiImplicitParam(name = "payRequest", value = "请求数据", dataTypeClass = PayRequest.class))
+    @ApiResponses(@ApiResponse(code = 200, message = "请求成功", response = PayResponse.class))
+    @RequestMapping(value = "/pay", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public PayResponse pay(@RequestBody PayRequest payRequest) throws PayapiException {
 
-        log.info("请求数据：{}", request);
-
-        PayRequest payRequest = JSON.parseObject(request, PayRequest.class);
-
-        log.info("解析获得的请求对象：{}",payRequest);
-
+        log.info("请求数据：{}", payRequest);
         String method = payRequest.getMethod();
         String version = payRequest.getVersion();
 
@@ -66,9 +62,8 @@ public class PayapiController {
         payResponse.setResultMsg(PayapiResultMessageConstant.RESULT_MESSAGE_SUCCESS);
 
 
-        String response = JSON.toJSONString(payResponse);
-        log.info("响应数据：{}", response);
-        return response;
+        log.info("响应数据：{}", payResponse);
+        return payResponse;
     }
 
 
