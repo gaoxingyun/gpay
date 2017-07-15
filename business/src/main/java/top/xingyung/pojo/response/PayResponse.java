@@ -21,7 +21,7 @@ public class PayResponse {
     private String resultMsg;
 
     // 返回数据
-    private Object resultContent;
+    private Map<String, Object> resultContent;
 
 
     public String getResultCode() {
@@ -40,11 +40,11 @@ public class PayResponse {
         this.resultMsg = resultMsg;
     }
 
-    public Object getResultContent() {
+    public Map<String, Object> getResultContent() {
         return resultContent;
     }
 
-    public void setResultContent(Object resultContent) {
+    public void setResultContent(Map<String, Object> resultContent) {
         this.resultContent = resultContent;
     }
 
