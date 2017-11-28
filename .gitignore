@@ -1,8 +1,10 @@
 *.log
 *.class
 gradle/
+build/
 logs/
 .gradle/
 .git/
 .idea/
 .build/
+
